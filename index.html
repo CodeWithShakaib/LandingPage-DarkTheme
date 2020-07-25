@@ -8,12 +8,20 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   
 <script>
+var scrol=0;
 $(document).ready(function(){
-  
+$("#intro-img").show(1000);
+window.addEventListener('scroll', function() {
+  scrol =scrol+1;
+  if (scrol == 50){
+  $("#2ndDiv").show(1000);
+  }
+});
 });
 </script>
   <style> 
@@ -52,7 +60,7 @@ $(document).ready(function(){
   </head>
   <body id="body" class="container-fluid p-0">
 
-    <nav class="navbar navbar-expand-lg navbar-dark p-3" style="background:#1c2230;">
+    <nav class="navbar navbar-expand-lg navbar-dark p-5" style="background:#1c2230;">
   <a class="navbar-brand" href="#"><img style="width: 120px;" src="images/logo.svg"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -75,19 +83,19 @@ $(document).ready(function(){
   </div>
 </nav>
 <div class="text-center mt-4">
-<img src="images/illustration-intro.png"  class="mb-4 img-fluid mx-auto" alt="img"><br>
+<img src="images/illustration-intro.png" id="intro-img" style="display:none;" class="mb-4 img-fluid mx-auto" alt="img"><br>
 <h1 style="color:white;" class="ml-2 mr-2">All your files in one secure location,</h1>
     
     <div id="desktop"style="background-image:url('images/bg-curvy-desktop.svg');height:420px; width:100%;" class="">
     <h1 style="color:white;" class="ml-2 mr-2">access anywhere.</h1>
     <p style="color:white;font-size:18px;" class="ml-2 mr-2 mt-5 mb-4">Fylo stores all important files in one secure location<br>access them whenever you need, share and colleborated with<br>friends, family and  coworkers.</p>
-    <button type="button" class="btn rounded-pill" style="width:270px; background-color:#43b1d2; font-weight:bold; color:white;">Get Started</button>
+    <button type="button" id="button" class="btn rounded-pill" style="width:270px; background-color:#43b1d2; font-weight:bold; color:white;">Get Started</button>
     </div>
     <div id="mobile"  style="background-image:url('images/bg-curvy-mobile.svg');height:150px; width:100%;" class=""></div>
    
     </div>
 
-    <div class="container-fluid pb-3" id="intro-img" style="background:#181F2B;">
+    <div class="container-fluid pb-3"  style="background:#181F2B;">
   <div class="row">
     <div class="col text-center  text-light mb-5 ml-5 pl-5">
       <img src="images/computer1.png" style="width:75px;"class="mb-3 img-fluid " alt="img">
@@ -119,11 +127,11 @@ $(document).ready(function(){
   </div>
 
   
-    <div class="container-fluid pt-5" style="background:#181F2B;">
+    <div class="container-fluid pt-5" style="background:#181F2B;display:none;" id="2ndDiv">
     <div class="container ">
   <div class="row">
     <div class="col">
-     <img src="images/illustration-stay-productive.png" class="mb-4 img-fluid " alt="img"><br>
+     <img src="images/illustration-stay-productive.png" class="mb-4 img-fluid " alt="img">
     </div>
     <div class="col float-left text-light mt-5 pt-5">
       <h1 class="mb-3">Stay productive,<br>wherever you are</h1>
@@ -143,7 +151,7 @@ $(document).ready(function(){
     margin-bottom: -10px;">
   <div class="row ">
     
-    <div class="col ml-5 mr-5 p-2  pt-5" style="background-color:#21293c;">
+    <div class="col ml-5 mr-5 p-4  pt-5" style="background-color:#21293c;">
       <p class="mb-5">The ability, to use the smartphone, tablet or computer to access your account means your files follow you everywhere. </p>
     
    
@@ -161,7 +169,7 @@ $(document).ready(function(){
   </div>
     
     </div>
-    <div class="col ml-5 mr-5 p-2  pt-5 " style="background-color:#21293c;">
+    <div class="col ml-5 mr-5 p-4  pt-5 " style="background-color:#21293c;">
       <p class="mb-5">The ability, to use the smartphone, tablet or computer to access your account means your files follow you everywhere. </p>
     
    
@@ -179,7 +187,7 @@ $(document).ready(function(){
   </div>
     
     </div>
-    <div class="col ml-5 mr-5 p-2  pt-5" style="background-color:#21293c;">
+    <div class="col ml-5 mr-5 p-4  pt-5" style="background-color:#21293c;">
       <p class="mb-5">The ability, to use the smartphone, tablet or computer to access your account means your files follow you everywhere. </p>
     
    
@@ -207,16 +215,16 @@ $(document).ready(function(){
 <p>The ability, to use the smartphone, tablet or computer to access your account means your files follow you everywhere</p>
 <div class="">
 <div class="row mt-5 text-center">
-    <div class="col-sm-7"> <input type="text" class="form-control rounded-pill" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping"></div>
-    <div class="col-sm-5"><button type="button" class="btn rounded-pill" style="width:100%; background-color:#43b1d2; font-weight:bold; color:white;">Get Started For Free</button></div>
+    <div class="col-sm-8"> <input type="text" class="form-control rounded-pill" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping"></div>
+    <div class="col-sm-4"><button type="button" class="btn rounded-pill" style="width:200px; background-color:#43b1d2; font-weight:bold; color:white;">Get Started For Free</button></div>
   </div></div>
-</div></div><div style="color:white;background-color:#0c1524; height:50px; bottom: 0;position: fixed; width:100%;" class="text-center"><p class="pt-3">Designed and devolped by <b style="color:#43b1d2;">Shakaib Hassan</b> with ❤️</p></div>
+</div></div><div style="color:white;background-color:#0c1524; height:50px;bottom: 0;position: fixed; width:100%;" class="text-center"><p class="pt-3">Designed and devolped by <b style="color:#43b1d2;">Shakaib Hassan</b> with ❤️</p></div>
 
 
   
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
